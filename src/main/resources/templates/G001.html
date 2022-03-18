@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" th:action="@{/guestadd}" th:object="${bean}">
+		<table>
+			<tr>
+
+				<td>Guest Name</td>
+				<td>Guest NRC</td>
+				<td>Guest Phone</td>
+				<td>Guest Address</td>
+				<td>Guest Postcode</td>
+				<td>Guest Email</td>
+				<td>Guest Gender</td>
+				<td>Guest DOB</td>
+				<td>Guest Passport</td>
+				<td>Member Type</td>
+				
+
+			</tr>
+			<tr>
+				<td><input type="text" th:field="*{guest_name}"></td>
+				<td><input type="text" th:field="*{guest_NRC}"></td>
+				<td><input type="text" th:field="*{guest_phone}"></td>
+				<td><input type="text" th:field="*{guest_address}"></td>
+				<td><input type="text" th:field="*{postcode}"></td>
+				<td><input type="text" th:field="*{guest_email}"></td>
+				<td><input type="text" th:field="*{guest_gender}"></td>
+				<td><input type="text" th:field="*{guest_DOB}"></td>
+				<td><input type="text" th:field="*{guest_passport}"></td>
+				<td><select id="expenseType"
+									class="normal_sel" th:field="*{member}">
+										<option th:each="list:${mList}" th:text="${list.memtype_name}"
+											th:value="${list.memtype_id}"></option>
+								</select></td>
+			</tr>
+			<tr><td><input type="submit" value="Save" class="button"/></td></tr>
+		</table>
+		
+	</form>
+</body>
+</html>

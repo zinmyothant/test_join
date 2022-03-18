@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/new}" th:object="${ser}" method="post">
+		<table>
+			<tr>
+				<td>Service Name</td>
+				<td>Service Price</td>
+				<td>Service Desc</td>
+				<td>Package Name</td>
+			</tr>
+			<tr>
+				<td><input type="text" th:field="*{service_name}" /></td>
+				<td><input type="text" th:field="*{price}" /></td>
+				<td><input type="text" th:field="*{service_desc}" /></td>
+		<td><select id="expenseType"
+									class="normal_sel" th:field="*{pack}">
+										<option th:each="list:${pList}" th:text="${list.pack_name}"
+											th:value="${list.pack_id}"></option>
+								</select></td>
+			</tr>
+			<tr><td><input type="submit" value="Save"></td></tr>
+		</table>
+	</form>
+</body>
+</html>

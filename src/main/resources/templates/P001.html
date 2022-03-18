@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/addPack}" th:object="${pack}" method="post">
+		<table>
+			<tr>
+				<td>Package Name</td>
+				<td>Package Price</td>
+				<td>Package Desc</td>
+				
+			</tr>
+			<tr>
+				<td><input type="text" th:field="*{pack_name}" /></td>
+				<td><input type="text" th:field="*{pack_price}" /></td>
+				<td><input type="text" th:field="*{pack_desc}" /></td>
+		<tr><td><input type="submit" value="save"></td></tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+		<table>
+			<tr>
+
+				<td>Guest Name</td>
+				<td>Guest NRC</td>
+				<td>Guest Phone</td>
+				<td>Guest Address</td>
+				<td>Guest Postcode</td>
+				<td>Guest Email</td>
+				<td>Guest Gender</td>
+				<td>Guest DOB</td>
+				<td>Guest Passport</td>
+				<td>Member Type</td>
+				<td>Discount</td>
+
+			</tr>
+			<tr th:each="list:${mList}">
+			<td th:text="${list.guest_name}"></td>
+			<td th:text="${list.guest_NRC}"></td>
+			<td th:text="${list.guest_phone}"></td>
+			<td th:text="${list.guest_address}"></td>
+			<td th:text="${list.postcode}"></td>
+			<td th:text="${list.guest_email}"></td>
+			<td th:text="${list.guest_gender}"></td>
+			<td th:text="${list.guest_DOB}"></td>
+			<td th:text="${list.guest_passport}"></td>
+			<td th:text="${list.member.memtype_name}"></td>
+			<td th:text="${list.member.memtype_discount}"></td>
+			
+			
+			</tr>
+		
+		</table>
+		
+
+</body>
+</html>

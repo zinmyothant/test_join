@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+<table>
+<tr><td>Service Name</td>
+<td>Service Price</td>
+<td>Service Des</td>
+<td>Package Name</td>
+</tr>
+<tr>
+<tr th:each="list:${sList}"><td th:text="${list.service_name}"></td>
+<td th:text="${list.price}"></td>
+<td th:text="${list.service_desc}"></td>
+<td th:text="${list.pack}"></td>
+
+</tr>
+</table>
+</form>
+</body>
+</html>

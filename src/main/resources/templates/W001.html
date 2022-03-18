@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td> Member Type Name</td>
+<td>Discount</td>
+</tr>
+<tr th:each="mList:${list}"><td th:text="${mList.memtype_name}">
+
+</td>
+<td th:text="${mList.memtype_discount}">
+
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

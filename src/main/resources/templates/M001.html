@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:object="${bean}" th:action="@{/memadd}" method="post">
+		<table>
+			<tr>
+				<td>Member Type Name</td>
+				<td>Discount</td>
+			</tr>
+			<tr>
+				<td><input th:field="*{memtype_name}" type="text">
+				</td>
+				<td><input th:field="*{memtype_discount}" type="text"></td>
+			</tr>
+			<tr><td><input type="submit" value="Save" class="button"/></td></tr>
+		</table>
+	</form>
+</body>
+</html>
